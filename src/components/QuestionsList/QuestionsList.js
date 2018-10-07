@@ -17,12 +17,12 @@ import './QuestionsList.css';
 // });
 // this.setState(updater);
 
-const QuestionsList = ( {questions = []} = {} ) => {
+const QuestionsList = ({ questions = [], onValueChange} = {} ) => {
 
     const rows = [];
-    questions.questions.map((questionElement) => {
+    questions.map((questionElement) => {
         rows.push(
-            <QuestionElement {...questionElement} />
+            <QuestionElement {...questionElement} onValueChange={onValueChange} />
         )
     }
 )

@@ -2,11 +2,11 @@ import React from 'react';
 
 import './TextQuestion.css';
 
-const TextQuestion = ({ question, type } = {}) => {
+const TextQuestion = ({ question, type, id, onValueChange } = {}) => {
     return (
-        <div className='question'>
+        <div id={id} className='question'>
             {question}
-            <input type={type} className='question'></input>
+            <input type={type} className='question' onChange={onValueChange(id)}></input>
         </div>
     )
 }
